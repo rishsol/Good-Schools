@@ -13,19 +13,25 @@ from pandas.io.html import read_html
 
 path = '/Users/rishabsolanki09@gmail.com/Downloads/Sale_Prices_City.csv'
 all_cities = pd.read_csv(path)
-nj_cities = pd.DataFrame()
+
+nj_data = pd.DataFrame()
+nj_cities = pd.Series()
 medianPriceList = pd.Series()
-for row in all_cities:
-    i = 0
+
+i = 0
+while i < 10:
     if all_cities['StateName'][i] == 'New Jersey':
-        nj_cities.append(all_cities['RegionName'][i])
-        medianPriceList[i] = all_cities['2019-07'][i]
-        i = i + 1
+        nj_cities.append([all_cities['RegionName'][i]])
+        medianPriceList.append([all_cities['2019-07'][i]])
+
+    i += 1
 
 #nj_cities.insert(0, 'Median Home Price (07-2019)', medianPriceList, True)
+nj_data.append(nj_cities, ignore_index= True)
+
 print(nj_cities)
-
-
+#print(all_cities)
+#print(all_cities['StateName'][0])
 
 
 #for city in nj_cities:
