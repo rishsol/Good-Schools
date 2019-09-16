@@ -9,7 +9,7 @@ from sklearn.svm import SVC
 from sklearn.neural_network import MLPClassifier
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+
 
 # Load data
 iris = datasets.load_iris()
