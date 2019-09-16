@@ -5,7 +5,7 @@ def scientificToStandard(str):
     significand = int(str[0: index], 10)
     order_of_magnitude = int(str[index + 1:] , 10)
 
-    return significand * (10**order_of_magnitude)
+    return significand * (10 ** order_of_magnitude)
 
 
 path = '/Users/rishabsolanki09@gmail.com/Downloads/Sale_Prices_City.csv'
@@ -30,4 +30,6 @@ for num in np.nditer(all_info[:, 1], op_flags = ['readwrite']):
         else:
             num[...] = scientificToStandard(str(num))
 
-print(all_info)
+#url = 'https://www.zillow.com/schools/'
+for city in all_info[0]:
+    url = 'https://www.zillow.com/' + city + '-nj/schools/'
