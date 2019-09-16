@@ -4,4 +4,5 @@ I create a numpy array of NJ cities and their corresponding median home prices (
 To reduce the number of confounding variables, only cities in New Jersey were used.  
 
 The following shows the cleansed data of NJ cities and their corresponding median home prices:
-![](NJ Data.png)
+
+![](NJData.png)
