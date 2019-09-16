@@ -5,4 +5,4 @@ To reduce the number of confounding variables, only cities in New Jersey were us
 
 The following shows the cleansed data of NJ cities and their corresponding median home prices:
 
-![](NJ Data.png)
+![](NJData.png)
