@@ -19,7 +19,7 @@ medianPriceList = pd.Series()
 
 i = 0
 while i < len(all_cities['RegionID']):
-    if all_cities['StateName'][i] == 'New Jersey':
+    if all_cities['StateName'][i] != 'New Jersey':
         nj_cities.append(([all_cities['RegionName'][i]]))
         medianPriceList.append([all_cities['2019-07'][i]])
 
